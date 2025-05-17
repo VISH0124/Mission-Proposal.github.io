@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chalo apne maal ko propose kare</title>
+    <link rel="stylesheet" href="./style.css" />
+   <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="container">
+      <!-- Replace the src with your own image path -->
+      <img src="no 3 img.webp" alt="Your Cute Image" style="max-width: 100%; height: auto;" />
+
+      <h1>Ab maan jao chup chap vese bhi tumhare pass koi option nahi hai 😁😁😁</h1>
+      <p>Maan jao ya krte raho time pass</p>
+
+      <div class="btn">
+        <a href="yes.html">Yes</a>
+        <a href="#" id="move-random">No</a>
+      </div>
+    </div>
+
+    <script>
+      // JavaScript to randomly move the "No" button
+      const noButton = document.getElementById('move-random');
+
+      noButton.addEventListener('mouseover', () => {
+        const container = document.querySelector('.container');
+        const maxX = container.clientWidth - noButton.offsetWidth;
+        const maxY = container.clientHeight - noButton.offsetHeight;
+
+        const randomX = Math.floor(Math.random() * maxX);
+        const randomY = Math.floor(Math.random() * maxY);
+
+        noButton.style.position = 'absolute';
+        noButton.style.left = `${randomX}px`;
+        noButton.style.top = `${randomY}px`;
+      });
+    </script>
+  </body>
+</html>
