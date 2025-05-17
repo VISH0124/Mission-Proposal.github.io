@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chalo apne maal ko propose kare</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <img src="images/no 3 img.webp" alt="Run sticker" class="custom-sticker">
+    <h1>Ab maan jao chup chap vese bhi tumhare pass koi option nahi hai 😁😁😁</h1>
+    <p>Maan jao ya krte raho time pass</p>
+    <div class="btn">
+      <a href="yes.html">Yes</a>
+      <a href="#" id="move-random">No</a>
+    </div>
+  </div>
+  <script src="script.js"></script>
+  <script>
+    const noButton = document.getElementById('move-random');
+    noButton.addEventListener('mouseover', () => {
+      const container = document.querySelector('.container');
+      const maxX = window.innerWidth - noButton.offsetWidth;
+      const maxY = window.innerHeight - noButton.offsetHeight;
+      noButton.style.position = 'absolute';
+      noButton.style.left = `${Math.random() * maxX}px`;
+      noButton.style.top = `${Math.random() * maxY}px`;
+    });
+  </script>
+</body>
+</html>
